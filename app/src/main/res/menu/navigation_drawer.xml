@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/home_fragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+
+        />
+
+    <item
+        android:id="@+id/profile_fragment"
+        android:icon="@drawable/ic_person"
+        android:title="Profile"
+        />
+
+
+
+    <item
+        android:id="@+id/bookmark_fragment"
+        android:icon="@drawable/ic_bookmark"
+        android:title="Book Mark"
+        />
+
+
+    <item
+        android:id="@+id/notification_fragment"
+        android:icon="@drawable/ic_notification"
+        android:title="Notify" />
+
+
+
+   <!-- <group android:checkableBehavior="single">
 
 
         <item
@@ -28,6 +60,12 @@
             android:icon="@drawable/ic_notification"
             android:title="Notify" />
 
+        <item
+            android:id="@+id/test_fragment"
+            android:icon="@drawable/ic_blood"
+            android:title="test" />
+
+
     </group>
 
     <item android:title="">
@@ -44,6 +82,8 @@
                     android:title="share" />
             </group>
         </menu>
-    </item>
+    </item>-->
+
+
 
 </menu>

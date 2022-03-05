@@ -15,22 +15,25 @@
     </style>
 
 
-<style name="splash_theme" parent="Theme.AppCompat.Light.NoActionBar">
-    <item name="android:windowBackground">@drawable/bg_splash</item>
-    <item name="windowNoTitle">true</item>
-    <item name="windowActionBar">false</item>
-    <item name="android:windowFullscreen">true</item>
-    <item name="android:windowContentOverlay">@null</item>
+    <!--    best splash screen..-->
+    <style name="splash_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
 
-</style>
+    </style>
 
-<!--    for custom toolbar-->
+    <!--    for custom toolbar-->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-    <style name="AppTheme.popUpOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="AppTheme.popUpOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-<!--    for bg gradiant-->
+    <!--    for bg gradiant-->
     <style name="AppTheme.GradientStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="windowActionBar">false</item>
@@ -39,6 +42,17 @@
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
         </item>
     </style>
+
+
+    <!--   todo: for doing nav-->
+    <style name="Theme.BloodDonorApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Navdrawer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Navdrawer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>
