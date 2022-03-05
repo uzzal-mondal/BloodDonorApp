@@ -8,51 +8,92 @@
     android:background="@drawable/bg_gradiant"
     tools:context=".MainActivity">
 
-
-    <RelativeLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <ImageView
-            android:id="@+id/image_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/ic_menu" />
-
-        <TextView
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/my_Toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Dashboard"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/ic_notification"
-            app:tint="@color/white" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
 
-    </RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/linear_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:weightSum="6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/image_menu"
+                        android:layout_weight="0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
 
-    <ImageView
-        android:id="@+id/image_logo"
-        android:layout_width="120dp"
-        android:layout_height="110dp"
-        android:scaleType="fitCenter"
-        android:padding="6dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/logo_sp" />
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:gravity="center"
+                        android:text="Dashboard"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_notification"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/image_logo"
+                    android:layout_width="120dp"
+                    android:layout_height="110dp"
+
+                    android:layout_marginBottom="16dp"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linear_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
 
 
     <!-- <include

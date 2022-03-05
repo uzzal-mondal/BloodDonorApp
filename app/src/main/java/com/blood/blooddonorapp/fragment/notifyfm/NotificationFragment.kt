@@ -1,4 +1,4 @@
-package com.blood.blooddonorapp.fragment
+package com.blood.blooddonorapp.fragment.notifyfm
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,10 +1,9 @@
-package com.blood.blooddonorapp.fragment.homefragment
+package com.blood.blooddonorapp.fragment.homefm
 
 import android.app.Activity
 import android.view.LayoutInflater
 
 import android.view.ViewGroup
-import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
 import com.blood.blooddonorapp.databinding.ItemDetailsLayoutBinding
 

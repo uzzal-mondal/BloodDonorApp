@@ -1,4 +1,4 @@
-package com.blood.blooddonorapp.fragment
+package com.blood.blooddonorapp.fragment.profilefm
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

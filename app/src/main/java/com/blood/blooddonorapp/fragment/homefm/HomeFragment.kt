@@ -1,7 +1,5 @@
-package com.blood.blooddonorapp.fragment.homefragment
+package com.blood.blooddonorapp.fragment.homefm
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

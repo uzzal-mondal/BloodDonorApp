@@ -5,26 +5,26 @@
 
 
         <item
-            android:id="@+id/home_fragment"
+            android:id="@+id/homes_fragment"
             android:icon="@drawable/ic_home"
             android:title="Home"
 
             />
 
         <item
-            android:id="@+id/profile_fragment"
+            android:id="@+id/profiles_fragment"
             android:icon="@drawable/ic_person"
             android:title="Profile" />
 
 
         <item
-            android:id="@+id/bookmark_fragment"
+            android:id="@+id/bookmarks_fragment"
             android:icon="@drawable/ic_bookmark"
             android:title="Book Mark" />
 
 
         <item
-            android:id="@+id/notification_fragment"
+            android:id="@+id/notifications_fragment"
             android:icon="@drawable/ic_notification"
             android:title="Notify" />
 
