@@ -27,6 +27,7 @@
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main_bottom.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main_nav.xml" value="0.209375" />
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/dialog_delete.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/dialog_map.xml" value="0.25" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/dialog_user_details.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/drawer_header.xml" value="0.209375" />
@@ -42,8 +43,10 @@
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/fragment_test.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/item_details_layout.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/item_info_dialog.xml" value="0.209375" />
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/item_user_list_layout.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/my_toolbar.xml" value="0.25" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/menu/bottom_menu.xml" value="0.209375" />
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/menu/item_option_menu.xml" value="0.2" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/menu/menu.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/menu/navigation_drawer.xml" value="0.209375" />
       </map>

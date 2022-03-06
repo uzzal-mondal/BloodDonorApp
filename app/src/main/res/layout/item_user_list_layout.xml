@@ -78,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_title" />
 
             <ImageView
-                android:id="@+id/image_more"
+                android:id="@+id/image_option_mn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

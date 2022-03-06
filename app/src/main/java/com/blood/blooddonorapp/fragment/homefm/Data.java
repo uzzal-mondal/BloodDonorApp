@@ -7,7 +7,7 @@ public class Data {
 
     private int imageProfile;
     private int imageMap;
-    private int imageMore;
+    private int imageOptionMn;
     private String donorName;
     private String donorDateTime;
     private String patientPb;
@@ -19,11 +19,11 @@ public class Data {
     private String contact;
 
 
-    public Data(int imageProfile, int imageMap, int imageMore, String donorName, String donorDateTime, String patientPb, String bloodGp, String bloodAmount,
+    public Data(int imageProfile, int imageMap, int imageOptionMn, String donorName, String donorDateTime, String patientPb, String bloodGp, String bloodAmount,
                 String dateTimeDay, String time, String place, String contact) {
         this.imageProfile = imageProfile;
         this.imageMap = imageMap;
-        this.imageMore = imageMore;
+        this.imageOptionMn = imageOptionMn;
         this.donorName = donorName;
         this.donorDateTime = donorDateTime;
         this.patientPb = patientPb;
@@ -51,12 +51,12 @@ public class Data {
         this.imageMap = imageMap;
     }
 
-    public int getImageMore() {
-        return imageMore;
+    public int getImageOptionMn() {
+        return imageOptionMn;
     }
 
-    public void setImageMore(int imageMore) {
-        this.imageMore = imageMore;
+    public void setImageOptionMn(int imageOptionMn) {
+        this.imageOptionMn = imageOptionMn;
     }
 
     public String getDonorName() {
