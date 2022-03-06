@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable-v24/ic_close_black_24dp.xml" value="0.22552083333333334" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable-xxxhdpi/ic_cancel.xml" value="0.2074074074074074" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable/bg_dashboard.xml" value="0.22552083333333334" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable/bg_edit_text.xml" value="0.2175925925925926" />
@@ -26,6 +27,8 @@
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main_bottom.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/container_main_nav.xml" value="0.209375" />
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/dialog_map.xml" value="0.25" />
+        <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/dialog_user_details.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/drawer_header.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/fragment_book_mark.xml" value="0.209375" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/layout/fragment_bookmark.xml" value="0.22135416666666666" />

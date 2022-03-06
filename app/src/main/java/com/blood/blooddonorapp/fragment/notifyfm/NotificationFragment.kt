@@ -16,6 +16,6 @@ class NotificationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.item_info_dialog, container, false)
+        return inflater.inflate(R.layout.dialog_user_details, container, false)
     }
 }

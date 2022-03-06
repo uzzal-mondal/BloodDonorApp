@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:elevation="32dp"
     app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="22dp"
+    app:cardCornerRadius="12dp"
     app:cardMaxElevation="8dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
@@ -16,17 +16,34 @@
         android:layout_height="match_parent">
 
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp">
 
 
+            <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabClose"
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:src="@drawable/ic_close_black_24dp"
+                app:backgroundTint="#D11A2A"
+                app:fabCustomSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:tint="@android:color/white" />-->
+
             <ImageView
-                android:id="@+id/btnClose"
+                android:id="@+id/btn_close"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:layout_marginEnd="8dp"
                 android:padding="4dp"
                 android:src="@drawable/ic_cancel"
                 app:layout_constraintEnd_toEndOf="parent"

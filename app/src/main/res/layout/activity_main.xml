@@ -10,9 +10,6 @@
 
 <!--   todo :  design to bottom nav -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_dashboard"
@@ -39,7 +36,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <fragment
-                android:id="@+id/container_host_fm"
+                android:id="@+id/container_host_fragment"
                 android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
