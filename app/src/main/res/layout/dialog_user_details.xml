@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,7 +13,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -96,6 +94,7 @@
                     android:enabled="true"
                     android:hint="Patient problem"
                     android:inputType="text"
+                    android:tag="Patient problem"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -121,7 +120,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/et_1">
 
                 <AutoCompleteTextView
-                    android:id="@+id/auto_text_exp_location"
+                    android:id="@+id/auto_text_blood_group"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
@@ -140,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:hint="Number of Bag"
+
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@android:color/darker_gray"
@@ -157,7 +156,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
+                    android:hint="Number of Bag"
                     android:inputType="number"
+                    android:tag="Number of Bag"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -172,26 +173,28 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+
+                app:endIconDrawable="@drawable/ic_calendar"
                 android:textColorHint="@android:color/darker_gray"
-                android:hint="Date"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@android:color/darker_gray"
                 app:boxStrokeWidthFocused="1dp"
-                app:endIconDrawable="@drawable/ic_time"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/et_6"
                 app:layout_constraintEnd_toStartOf="@+id/et_5"
                 app:layout_constraintStart_toStartOf="parent"
+
                 app:layout_constraintTop_toBottomOf="@+id/et_3">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
                     android:id="@+id/et_date"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
-                    android:inputType="date"
-                    android:textColor="#000"
+                    android:padding="16dp"
+                    android:text="Date"
+                    android:textColor="@android:color/darker_gray"
                     android:textSize="14sp" />
 
 
@@ -205,7 +208,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:hint="Time"
+
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@android:color/darker_gray"
@@ -213,8 +216,8 @@
                 app:endIconDrawable="@drawable/ic_time"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="@+id/et_4"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/et_4"
                 app:layout_constraintTop_toTopOf="@+id/et_4">
 
@@ -223,7 +226,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
+                    android:hint="Time"
                     android:inputType="time"
+                    android:tag="Time"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -255,6 +260,7 @@
                     android:enabled="true"
                     android:hint="Hospital Name"
                     android:inputType="none"
+                    android:tag="Hospital Name"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -273,9 +279,9 @@
                 app:boxStrokeColor="@android:color/darker_gray"
                 app:boxStrokeWidthFocused="1dp"
                 app:hintTextColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/et_8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/et_8"
                 app:layout_constraintTop_toBottomOf="@+id/et_6">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -285,6 +291,7 @@
                     android:enabled="true"
                     android:hint="District"
                     android:inputType="text"
+                    android:tag="District"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -303,8 +310,8 @@
                 app:boxStrokeColor="@android:color/darker_gray"
                 app:boxStrokeWidthFocused="1dp"
                 app:hintTextColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_7">
 
@@ -315,6 +322,7 @@
                     android:enabled="true"
                     android:hint="Contact"
                     android:inputType="number"
+                    android:tag="Contact"
                     android:textColor="#000"
                     android:textSize="14sp" />
 
@@ -346,3 +354,5 @@
     </ScrollView>
 
 </androidx.cardview.widget.CardView>
+
+
