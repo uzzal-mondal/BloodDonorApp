@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity() {
         val minute = c.get(Calendar.MINUTE)
         val tpd =
             TimePickerDialog(this, TimePickerDialog.OnTimeSetListener(function = { view, h, m ->
-                dUserBinding.textTime.text = "$h : $m : "
+                dUserBinding.textTime.text = "$h : $m  "
             }), hour, minute, false)
         tpd.show()
     }
