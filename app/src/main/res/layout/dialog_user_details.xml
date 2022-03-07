@@ -21,29 +21,15 @@
             android:layout_margin="6dp">
 
 
-            <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabClose"
-                style="@style/Widget.MaterialComponents.FloatingActionButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:foregroundGravity="center"
-                android:src="@drawable/ic_close_black_24dp"
-                app:backgroundTint="#D11A2A"
-                app:fabCustomSize="30dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0"
-                app:tint="@android:color/white" />-->
-
             <ImageView
                 android:id="@+id/btn_close"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
                 android:padding="4dp"
                 android:src="@drawable/ic_cancel"
+                app:layout_constraintBottom_toBottomOf="@+id/text_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,11 +44,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 android:text="Fill it out, Submit it"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/et_1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
@@ -114,7 +101,7 @@
                 app:boxStrokeColor="@android:color/darker_gray"
                 app:boxStrokeWidthFocused="1dp"
                 app:hintTextColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/et_4"
+                app:layout_constraintBottom_toTopOf="@+id/text_date"
                 app:layout_constraintEnd_toStartOf="@+id/et_3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_1">
@@ -139,7 +126,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@android:color/darker_gray"
@@ -165,77 +151,129 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_4"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            <TextView
+                android:id="@+id/text_date"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_rectangle_shape"
+                android:drawableEnd="@drawable/ic_calendar"
+                android:drawableTint="@android:color/darker_gray"
+                android:enabled="true"
+                android:padding="16dp"
+                android:text="dd.mm.yyyy"
+                android:textColor="@android:color/darker_gray"
                 android:textColorHint="@android:color/darker_gray"
-                app:boxBackgroundColor="@color/white"
+                android:textSize="14sp"
                 app:boxStrokeColor="@android:color/darker_gray"
-                app:boxStrokeWidthFocused="1dp"
-                app:endIconDrawable="@drawable/ic_calendar"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/et_6"
-                app:layout_constraintEnd_toStartOf="@+id/et_5"
+                app:layout_constraintEnd_toStartOf="@+id/text_time"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_3">
+                app:layout_constraintTop_toBottomOf="@+id/et_3" />
 
-                <TextView
-                    android:id="@+id/text_date"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_rectangle_shape"
-                    android:drawableEnd="@drawable/ic_calendar"
-                    android:enabled="true"
-                    android:padding="16dp"
-                    android:text="dd.mm.yyyy"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/et_5"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <TextView
+                android:id="@+id/text_time"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-
+                android:background="@drawable/bg_rectangle_shape"
+                android:drawableEnd="@drawable/ic_time"
+                android:enabled="true"
+                android:padding="16dp"
+                android:tag="Time"
+                android:text="time"
+                android:textColor="@android:color/darker_gray"
                 android:textColorHint="@android:color/darker_gray"
-                app:boxBackgroundColor="@color/white"
+                android:textSize="14sp"
                 app:boxStrokeColor="@android:color/darker_gray"
-                app:boxStrokeWidthFocused="1dp"
-                app:endIconDrawable="@drawable/ic_time"
-                app:endIconTint="@color/black"
-                app:hintTextColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/et_4"
+                app:layout_constraintBottom_toBottomOf="@+id/text_date"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/et_4"
-                app:layout_constraintTop_toTopOf="@+id/et_4">
-
-                <TextView
-                    android:id="@+id/text_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/bg_rectangle_shape"
-                    android:drawableEnd="@drawable/ic_time"
-                    android:enabled="true"
-                    android:inputType="time"
-                    android:padding="16dp"
-                    android:tag="Time"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
+                app:layout_constraintStart_toEndOf="@+id/text_date"
+                app:layout_constraintTop_toTopOf="@+id/text_date" />
 
 
-            </com.google.android.material.textfield.TextInputLayout>
+            <!-- <com.google.android.material.textfield.TextInputLayout
+                 android:id="@+id/et_4"
+                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="8dp"
+                 android:layout_marginTop="8dp"
+                 android:layout_marginEnd="8dp"
+                 android:textColorHint="@android:color/darker_gray"
+                 app:boxBackgroundColor="@color/white"
+                 app:boxStrokeColor="@android:color/darker_gray"
+                 app:boxStrokeWidthFocused="1dp"
+                 app:endIconDrawable="@drawable/ic_calendar"
+                 app:endIconTint="@color/black"
+                 app:hintTextColor="@color/black"
+                 app:layout_constraintBottom_toTopOf="@+id/et_6"
+                 app:layout_constraintEnd_toStartOf="@+id/et_5"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toBottomOf="@+id/et_3">
+
+                 <TextView
+                     android:id="@+id/text_date"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:background="@drawable/bg_rectangle_shape"
+                     android:drawableEnd="@drawable/ic_calendar"
+                     android:drawableTint="@android:color/darker_gray"
+                     app:boxStrokeColor="@android:color/darker_gray"
+                     android:textColorHint="@android:color/darker_gray"
+                     android:enabled="true"
+                     android:padding="16dp"
+                     android:text="dd.mm.yyyy"
+                     android:textColor="@android:color/darker_gray"
+                     android:textSize="14sp" />
+
+
+             </com.google.android.material.textfield.TextInputLayout>
+
+
+             <com.google.android.material.textfield.TextInputLayout
+                 android:id="@+id/et_5"
+                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="8dp"
+                 android:layout_marginEnd="8dp"
+
+                 android:textColorHint="@android:color/darker_gray"
+                 app:boxBackgroundColor="@color/white"
+                 app:boxStrokeColor="@android:color/darker_gray"
+                 app:boxStrokeWidthFocused="1dp"
+                 app:endIconDrawable="@drawable/ic_time"
+                 app:endIconTint="@color/black"
+                 app:hintTextColor="@color/black"
+                 app:layout_constraintBottom_toBottomOf="@+id/et_4"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toEndOf="@+id/et_4"
+                 app:layout_constraintTop_toTopOf="@+id/et_4">
+
+                 <TextView
+                     android:id="@+id/text_time"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:background="@drawable/bg_rectangle_shape"
+                     android:drawableEnd="@drawable/ic_time"
+                     app:boxStrokeColor="@android:color/darker_gray"
+                     android:textColorHint="@android:color/darker_gray"
+                     android:enabled="true"
+                     android:text="time"
+                     android:textColor="@android:color/darker_gray"
+                     android:textSize="14sp"
+                     android:padding="16dp"
+                     android:tag="Time" />
+
+
+             </com.google.android.material.textfield.TextInputLayout>
+
+             -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/et_6"
@@ -243,7 +281,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginEnd="8dp"
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
@@ -253,7 +291,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/et_7"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_5">
+                app:layout_constraintTop_toBottomOf="@+id/text_date">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_hospital"
@@ -274,7 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginEnd="8dp"
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
@@ -305,7 +343,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginEnd="8dp"
                 android:textColorHint="@android:color/darker_gray"
                 app:boxBackgroundColor="@color/white"
