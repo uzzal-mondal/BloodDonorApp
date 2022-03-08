@@ -1,4 +1,4 @@
-package com.blood.blooddonorapp.db.dao.entities
+package com.blood.blooddonorapp.db
 
 import androidx.room.Entity
 import androidx.room.Ignore

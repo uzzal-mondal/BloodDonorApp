@@ -14,7 +14,7 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.blood.blooddonorapp.R
 import com.blood.blooddonorapp.databinding.ItemUserListLayoutBinding
-import com.blood.blooddonorapp.db.dao.entities.Data
+import com.blood.blooddonorapp.db.Data
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -32,18 +32,18 @@ class HomeListAdapter(val context: Activity, private val dataList: List<Data>) :
     }
 
     override fun onBindViewHolder(holder: MyListViewHolder, position: Int) {
-        holder.binding.profileImage.setImageResource(dataList[position].imageProfile)
-        holder.binding.imageMap.setImageResource(dataList[position].imageMap)
-        holder.binding.imageOptionMn.setImageResource(dataList[position].imageOptionMn)
-        holder.binding.textTitle.text = dataList[position].donorName
-        holder.binding.textMdt.text = dataList[position].donorDateTime
-        holder.binding.textPatientPb.text = dataList[position].patientPb
-        holder.binding.textBloodGp.text = dataList[position].bloodGp
-        holder.binding.textBloodAmount.text = dataList[position].bloodAmount
-        holder.binding.textDateTimeDay.text = dataList[position].dateTimeDay
-        holder.binding.textTime.text = dataList[position].time
-        holder.binding.textPlace.text = dataList[position].place
-        holder.binding.textContact.text = dataList[position].contact
+        holder.binding.profileImage.setImageResource(dataList[position].bdImageProfile)
+        holder.binding.imageMap.setImageResource(dataList[position].bdImageMap)
+        holder.binding.imageOptionMn.setImageResource(dataList[position].bdImageOptionMn)
+        holder.binding.textTitle.text = dataList[position].bdDonorName
+        holder.binding.textMdt.text = dataList[position].bdDonorDateTime
+        holder.binding.textPatientPb.text = dataList[position].bdPatientPb
+        holder.binding.textBloodGp.text = dataList[position].bdBloodGp
+        holder.binding.textBloodAmount.text = dataList[position].bdBloodAmount
+        holder.binding.textDateTimeDay.text = dataList[position].bdDateTimeDay
+        holder.binding.textTime.text = dataList[position].bdTime
+        holder.binding.textPlace.text = dataList[position].bdPlace
+        holder.binding.textContact.text = dataList[position].bdContact
 
         holder.binding.imageMap.setOnClickListener {
             showDialogMap()

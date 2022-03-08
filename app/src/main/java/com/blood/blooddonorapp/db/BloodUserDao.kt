@@ -1,6 +1,7 @@
-package com.blood.blooddonorapp.db.dao.entities
+package com.blood.blooddonorapp.db
 
 import androidx.room.*
+import com.blood.blooddonorapp.db.Data
 
 /**
  * Created by Android Dev on 08-Mar-22 Mar, 2022
