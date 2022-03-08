@@ -75,7 +75,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_title">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_patient"
+                    android:id="@+id/et_patient_pb"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
@@ -325,13 +325,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/et_6">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_district"
+                    android:id="@+id/et_donor_name"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:enabled="true"
-                    android:hint="District"
+                    android:hint="Donor name"
                     android:inputType="text"
-                    android:tag="District"
+                    android:tag="Donor name"
                     android:textColor="#000"
                     android:textSize="14sp" />
 

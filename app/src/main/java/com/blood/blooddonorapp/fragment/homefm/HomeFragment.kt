@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.blood.blooddonorapp.R
 import com.blood.blooddonorapp.databinding.FragmentHomeBinding
+import com.blood.blooddonorapp.db.dao.entities.Data
 
 
 class HomeFragment : Fragment() {

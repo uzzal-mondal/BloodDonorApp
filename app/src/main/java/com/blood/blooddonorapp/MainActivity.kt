@@ -20,6 +20,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.blood.blooddonorapp.databinding.ActivityMainBinding
 import com.blood.blooddonorapp.databinding.DialogUserDetailsBinding
+import com.blood.blooddonorapp.db.dao.entities.BloodUserDB
+import com.blood.blooddonorapp.db.dao.entities.Data
 import com.google.android.material.navigation.NavigationView
 import java.util.*
 
@@ -112,42 +114,58 @@ class MainActivity : AppCompatActivity() {
             }
 
             dUserBinding.btnSubmit.setOnClickListener {
-                val patient = dUserBinding.etPatient.text.toString()
-                val bloodGp = dUserBinding.autoTextBloodGroup.text.toList()
-                val bloodBag = dUserBinding.etBloodBag.text.toString()
+                val donorName = dUserBinding.etDonorName.text.toString()
+                val patientPb = dUserBinding.etPatientPb.text.toString()
+                val bloodGp = dUserBinding.autoTextBloodGroup.text.toString()
+                val bloodBagAmount = dUserBinding.etBloodBag.text.toString()
                 val date = dUserBinding.textDate.text.toString()
                 val time = dUserBinding.textTime.text.toString()
-                val hospital = dUserBinding.etHospital.text.toString()
-                val district = dUserBinding.etDistrict.text.toString()
+                val hospitalPlace = dUserBinding.etHospital.text.toString()
                 val contact = dUserBinding.etContact.text.toString()
 
 
                 when {
-                    patient.isEmpty() -> {
-                        dUserBinding.etPatient.error = "patient name required"
+                    patientPb.isEmpty() -> {
+                        dUserBinding.etPatientPb.error = "patient problem required"
                     }
                     bloodGp.isEmpty() -> {
-                        dUserBinding.autoTextBloodGroup.error = "patient name required"
+                        dUserBinding.autoTextBloodGroup.error = "blood group required"
                     }
-                    bloodBag.isEmpty() -> {
-                        dUserBinding.etBloodBag.error = "patient name required"
+                    bloodBagAmount.isEmpty() -> {
+                        dUserBinding.etBloodBag.error = "blood bag  required"
                     }
                     date.isEmpty() -> {
-                        dUserBinding.textDate.error = "patient name required"
+                        dUserBinding.textDate.error = "date  required"
                     }
                     time.isEmpty() -> {
-                        dUserBinding.textTime.error = "patient name required"
+                        dUserBinding.textTime.error = "time  required"
                     }
-                    hospital.isEmpty() -> {
-                        dUserBinding.etHospital.error = "patient name required"
+                    hospitalPlace.isEmpty() -> {
+                        dUserBinding.etHospital.error = "hospital name required"
                     }
-                    district.isEmpty() -> {
-                        dUserBinding.etDistrict.error = "patient name required"
+                    donorName.isEmpty() -> {
+                        dUserBinding.etDonorName.error = "donor name required"
                     }
                     contact.isEmpty() -> {
-                        dUserBinding.etContact.error = "patient name required"
+                        dUserBinding.etContact.error = "contact  required"
                     }
                     else -> {
+                        /**
+                         * create a data list object from room entities.
+                         */
+                        val data = Data(
+                            donorName,
+                            patientPb,
+                            bloodGp,
+                            bloodBagAmount,
+                            date,
+                            time,
+                            hospitalPlace,
+                            contact
+                        )
+                       val rowId = BloodUserDB.getInstance(this!!).getDao().insertNewUserData(data)
+
+
                         Toast.makeText(this, "success.", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -175,9 +193,8 @@ class MainActivity : AppCompatActivity() {
 
         val dpd = DatePickerDialog(
             this,
-            DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                // Display Selected date in textbox
-                dUserBinding.textDate.setText("" + dayOfMonth + " " + monthOfYear + ", " + year)
+            DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+                dUserBinding.textDate.text = "$dayOfMonth $monthOfYear, $year"
             },
             year,
             month,
@@ -193,7 +210,7 @@ class MainActivity : AppCompatActivity() {
         val hour = c.get(Calendar.HOUR)
         val minute = c.get(Calendar.MINUTE)
         val tpd =
-            TimePickerDialog(this, TimePickerDialog.OnTimeSetListener(function = { view, h, m ->
+            TimePickerDialog(this, TimePickerDialog.OnTimeSetListener(function = { _, h, m ->
                 dUserBinding.textTime.text = "$h : $m  "
             }), hour, minute, false)
         tpd.show()
