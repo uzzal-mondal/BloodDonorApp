@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbarInclude.myToolbar)
+      //  setSupportActionBar(binding.toolbarInclude.myToolbar)
         showBottomNav()
         showDrawerNav()
         showAddData()
@@ -178,26 +178,31 @@ class MainActivity : AppCompatActivity() {
                             hospitalPlace,
                             contact
                         )
-                        val insertedRowId =
-                            BloodUserDataBase.getInstance(this!!).getDao().insertNewUserData(data)
-                        if (insertedRowId > 0) {
-                            Toast.makeText(this, "inserted success", Toast.LENGTH_SHORT).show()
-                            val homeFragment = HomeFragment()
-                            val fragment: Fragment? =
-                                supportFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
-                            if (fragment !is HomeFragment) {
-                                supportFragmentManager.beginTransaction()
-                                    .add(
-                                        R.id.container_host_fragment, homeFragment,
-                                        HomeFragment::class.java.simpleName
-                                    )
-                                    .commit()
 
+                        val holidayViewModel = MainViewModel()
+
+                        holidayViewModel.getData(this, data).observe(this, androidx.lifecycle.Observer {
+                            if (it > 0) {
+                                Toast.makeText(this, "inserted success", Toast.LENGTH_SHORT).show()
+                                val homeFragment = HomeFragment()
+                                val fragment: Fragment? =
+                                    supportFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
+                                if (fragment !is HomeFragment) {
+                                    supportFragmentManager.beginTransaction()
+                                        .add(
+                                            R.id.container_host_fragment, homeFragment,
+                                            HomeFragment::class.java.simpleName
+                                        )
+                                        .commit()
+
+                                }
+                            } else {
+                                Toast.makeText(this, "inserted unsuccessfully", Toast.LENGTH_SHORT)
+                                    .show()
                             }
-                        } else {
-                            Toast.makeText(this, "inserted unsuccessfully", Toast.LENGTH_SHORT)
-                                .show()
-                        }
+                        })
+
+
                     }
                 }
             }

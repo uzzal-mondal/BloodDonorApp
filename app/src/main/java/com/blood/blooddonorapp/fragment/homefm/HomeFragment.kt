@@ -33,22 +33,15 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-        /*list = BloodUserDataBase.getInstance(context = Activity())
-            .getDao().getAllUserDataList()
-        listAdapter = HomeListAdapter(context = Activity(), list)*/
-
-
-
-        showDataList()
-        inItRecyclerManage()
+            list = BloodUserDataBase.getInstance(activity!!)
+                .getDao().getAllUserDataList()
+            inItRecyclerManage()
     }
 
     private fun inItRecyclerManage() {
         binding.recyclerView.setHasFixedSize(true)
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireActivity())
-        binding.recyclerView.adapter = HomeListAdapter(requireActivity(), dataList )
+        binding.recyclerView.layoutManager = LinearLayoutManager(activity!!)
+        binding.recyclerView.adapter = HomeListAdapter(activity!!, list )
     }
 
     private fun showDataList() {
@@ -84,6 +77,7 @@ class HomeFragment : Fragment() {
 
 
             )
+
     }
 
 }
