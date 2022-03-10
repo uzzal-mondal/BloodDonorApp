@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
     lateinit var listAdapter: HomeListAdapter
     var list = listOf<Data>()
 
-    // private lateinit var homeListAdapter: HomeListAdapter
+    private lateinit var homeListAdapter: HomeListAdapter
     private lateinit var dataList: List<Data>
 
 
@@ -33,50 +33,34 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            list = BloodUserDataBase.getInstance(activity!!)
-                .getDao().getAllUserDataList()
-            inItRecyclerManage()
+        list = BloodUserDataBase.getInstance(activity!!)
+            .getDao().getAllUserDataList()
+
+
+        inItRecyclerManage()
+
     }
 
     private fun inItRecyclerManage() {
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(activity!!)
-        binding.recyclerView.adapter = HomeListAdapter(activity!!, list )
+        binding.recyclerView.adapter = HomeListAdapter(activity!!, list)
+
     }
 
     private fun showDataList() {
         dataList = listOf(
-            Data(
+            /*Data(
                 R.drawable.ic_donor, R.drawable.ic_location, R.drawable.ic_more,
                 "sep 17 at 1.45 pm", "SH", "Thalesia",
                 "A+", "1 bag", "jul 17 at 1:45 PM",
                 "9:45", "Khulna medical", "01980450700"
-            ),
+            )*/
 
-            Data(
-                R.drawable.ic_donor, R.drawable.ic_location, R.drawable.ic_more,
-                "sep 17 at 1.45 pm", "uzzal", "Thalesia",
-                "A+", "1 bag", "jul 17 at 1:45 PM",
-                "9:45", "Khulna medical", "01980450700"
-            ),
-
-            Data(
-                R.drawable.ic_donor, R.drawable.ic_location, R.drawable.ic_more,
-                "sep 17 at 1.45 pm", "suzal", "Thalesia",
-                "A+", "1 bag", "jul 17 at 1:45 PM",
-                "9:45", "Khulna medical", "01980450700"
-            ),
-
-            Data(
-                R.drawable.ic_donor, R.drawable.ic_location, R.drawable.ic_more,
-                "sep 17 at 1.45 pm", "RA", "Thalesia",
-                "A+", "1 bag", "jul 17 at 1:45 PM",
-                "9:45", "Khulna medical", "01980450700"
-            ),
+            Data(R.drawable.ic_donor, R.drawable.ic_location)
 
 
-
-            )
+        )
 
     }
 

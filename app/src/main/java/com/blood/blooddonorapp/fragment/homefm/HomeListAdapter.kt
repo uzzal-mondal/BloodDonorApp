@@ -21,7 +21,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 /**
  * Created by Android Dev on 05-Mar-22 Mar, 2022
  */
-class HomeListAdapter(val context: Activity, private val dataList: List<Data>) :
+class HomeListAdapter(
+    val context: Activity, private val dataList: List<Data>
+
+) :
     RecyclerView.Adapter<HomeListAdapter.MyListViewHolder>() {
 
 
@@ -150,8 +153,8 @@ class HomeListAdapter(val context: Activity, private val dataList: List<Data>) :
             Toast.makeText(context, " yes", Toast.LENGTH_LONG).show()
         }
 
-        builder.setNegativeButton(context.getString(R.string.dialog_cancel)){ _, _ ->
-            Toast.makeText(context,"cancel",Toast.LENGTH_LONG).show()
+        builder.setNegativeButton(context.getString(R.string.dialog_cancel)) { _, _ ->
+            Toast.makeText(context, "cancel", Toast.LENGTH_LONG).show()
         }
 
         val alertDialog: AlertDialog = builder.create()

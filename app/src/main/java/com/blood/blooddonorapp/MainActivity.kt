@@ -22,6 +22,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.blood.blooddonorapp.databinding.ActivityMainBinding
 import com.blood.blooddonorapp.databinding.DialogUserDetailsBinding
+
 import com.blood.blooddonorapp.db.BloodUserDataBase
 import com.blood.blooddonorapp.db.Data
 import com.blood.blooddonorapp.fragment.homefm.HomeFragment
@@ -39,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-      //  setSupportActionBar(binding.toolbarInclude.myToolbar)
+        setSupportActionBar(binding.toolbarInclude.myToolbar)
         showBottomNav()
         showDrawerNav()
         showAddData()
@@ -184,18 +185,7 @@ class MainActivity : AppCompatActivity() {
                         holidayViewModel.getData(this, data).observe(this, androidx.lifecycle.Observer {
                             if (it > 0) {
                                 Toast.makeText(this, "inserted success", Toast.LENGTH_SHORT).show()
-                                val homeFragment = HomeFragment()
-                                val fragment: Fragment? =
-                                    supportFragmentManager.findFragmentByTag(HomeFragment::class.java.simpleName)
-                                if (fragment !is HomeFragment) {
-                                    supportFragmentManager.beginTransaction()
-                                        .add(
-                                            R.id.container_host_fragment, homeFragment,
-                                            HomeFragment::class.java.simpleName
-                                        )
-                                        .commit()
 
-                                }
                             } else {
                                 Toast.makeText(this, "inserted unsuccessfully", Toast.LENGTH_SHORT)
                                     .show()

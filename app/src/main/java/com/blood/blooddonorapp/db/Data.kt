@@ -35,6 +35,8 @@ class Data : Serializable {
     var bdContact: String? = null
 
 
+
+
     @Ignore
     constructor(
         bdImageProfile: Int,
@@ -85,6 +87,16 @@ class Data : Serializable {
         this.bdTime = bdTime
         this.bdPlace = bdPlace
         this.bdContact = bdContact
+    }
+
+    constructor(
+
+    )
+
+    @Ignore
+    constructor(bdImageProfile: Int, bdImageMap: Int) {
+        this.bdImageProfile = bdImageProfile
+        this.bdImageMap = bdImageMap
     }
 
 
