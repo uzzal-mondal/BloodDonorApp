@@ -1,5 +1,6 @@
 package com.blood.blooddonorapp.db
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.blood.blooddonorapp.db.Data
 
@@ -20,6 +21,6 @@ interface BloodUserDao {
     fun updateUserData(data: Data): Int
 
     @Query("select * from tbl_blood")
-    fun getAllUserDataList(): List<Data>
+    fun getAllUserDataList(): LiveData<List<Data>>
 
 }

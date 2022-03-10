@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/drawable/bg_dashboard.xml" value="0.15" />
+        <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.14537037037037037" />
+        <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/layout/fragment_profile.xml" value="0.209375" />
+        <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/layout/item_user_list_layout.xml" value="0.209375" />
+        <entry key="..\:/P/BloodDonorApp/BloodDonorApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14537037037037037" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable/bg_splash.xml" value="0.22552083333333334" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable/ic_sp_logo.xml" value="0.22552083333333334" />
         <entry key="..\:/PencilboxKotlin/BloodDonorApp/app/src/main/res/drawable/splash_bg.xml" value="0.25" />

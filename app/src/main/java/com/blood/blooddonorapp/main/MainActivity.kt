@@ -1,4 +1,4 @@
-package com.blood.blooddonorapp
+package com.blood.blooddonorapp.main
 
 
 import android.annotation.SuppressLint
@@ -13,19 +13,18 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.blood.blooddonorapp.R
 import com.blood.blooddonorapp.databinding.ActivityMainBinding
 import com.blood.blooddonorapp.databinding.DialogUserDetailsBinding
 
-import com.blood.blooddonorapp.db.BloodUserDataBase
 import com.blood.blooddonorapp.db.Data
-import com.blood.blooddonorapp.fragment.homefm.HomeFragment
+import com.blood.blooddonorapp.viewmodel.MainViewModel
 import com.google.android.material.navigation.NavigationView
 import java.util.*
 
@@ -182,12 +181,13 @@ class MainActivity : AppCompatActivity() {
 
                         val holidayViewModel = MainViewModel()
 
-                        holidayViewModel.getData(this, data).observe(this, androidx.lifecycle.Observer {
+                        holidayViewModel.insertData(this, data).observe(this, androidx.lifecycle.Observer {
                             if (it > 0) {
-                                Toast.makeText(this, "inserted success", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "data save successfully", Toast.LENGTH_SHORT).show()
+                                dialog.dismiss()
 
                             } else {
-                                Toast.makeText(this, "inserted unsuccessfully", Toast.LENGTH_SHORT)
+                                Toast.makeText(this, "data save unsuccessfully", Toast.LENGTH_SHORT)
                                     .show()
                             }
                         })

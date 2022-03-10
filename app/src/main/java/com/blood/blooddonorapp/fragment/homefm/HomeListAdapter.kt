@@ -2,7 +2,9 @@ package com.blood.blooddonorapp.fragment.homefm
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.DatePickerDialog
 import android.app.Dialog
+import android.app.TimePickerDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,17 +16,18 @@ import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.blood.blooddonorapp.R
 import com.blood.blooddonorapp.databinding.ItemUserListLayoutBinding
+
 import com.blood.blooddonorapp.db.Data
+import com.blood.blooddonorapp.map.MapDialog
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 
 /**
  * Created by Android Dev on 05-Mar-22 Mar, 2022
  */
 class HomeListAdapter(
-    val context: Activity, private val dataList: List<Data>
-
-) :
+    val context: Activity, private val dataList: List<Data>) :
     RecyclerView.Adapter<HomeListAdapter.MyListViewHolder>() {
 
 
@@ -35,9 +38,6 @@ class HomeListAdapter(
     }
 
     override fun onBindViewHolder(holder: MyListViewHolder, position: Int) {
-        holder.binding.profileImage.setImageResource(dataList[position].bdImageProfile)
-        holder.binding.imageMap.setImageResource(dataList[position].bdImageMap)
-        holder.binding.imageOptionMn.setImageResource(dataList[position].bdImageOptionMn)
         holder.binding.textTitle.text = dataList[position].bdDonorName
         holder.binding.textMdt.text = dataList[position].bdDonorDateTime
         holder.binding.textPatientPb.text = dataList[position].bdPatientPb
@@ -48,8 +48,10 @@ class HomeListAdapter(
         holder.binding.textPlace.text = dataList[position].bdPlace
         holder.binding.textContact.text = dataList[position].bdContact
 
+
         holder.binding.imageMap.setOnClickListener {
-            showDialogMap()
+            MapDialog(context).show()
+            //showDialogMap()
         }
 
         holder.binding.imageOptionMn.setOnClickListener {
@@ -98,8 +100,6 @@ class HomeListAdapter(
         dialog.setContentView(R.layout.dialog_map)
         val btnClose = dialog.findViewById<FloatingActionButton>(R.id.fabClose)
 
-
-
         btnClose?.setOnClickListener {
             if (dialog.isShowing) {
                 dialog.dismiss()
@@ -137,13 +137,12 @@ class HomeListAdapter(
         )
         //
         if (!dialog.isShowing) {
+
             dialog.show()
         }
-
     }
 
     private fun showDeleteUserDialog() {
-
         val builder = AlertDialog.Builder(context)
         builder.setTitle(R.string.delete_app_title)
         builder.setMessage(R.string.delete_app_message)
@@ -161,6 +160,7 @@ class HomeListAdapter(
         alertDialog.setCancelable(false)
         alertDialog.show()
     }
+
 }
 
 

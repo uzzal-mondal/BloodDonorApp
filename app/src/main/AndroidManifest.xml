@@ -36,7 +36,7 @@
         </activity>
         <!--        todo: for keyboar hide..-->
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan">
 
